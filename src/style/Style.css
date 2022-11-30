@@ -158,6 +158,12 @@ color:white;
     margin-top:15px;
  }
  
+ .input-box input{
+    width:80%;
+ }
+ .heading h2{
+    font-size:0.7rem;
+ }
  
 
 }
