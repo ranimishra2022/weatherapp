@@ -5,7 +5,7 @@ import './style/Style.css';
 
 function App() {
 
-  const [city, setcity] = useState("Delhi");
+  const [city, setcity] = useState();
   
   // const [weatherinfo, setweatherinfo] = useState({
   //  description:"",
@@ -75,7 +75,8 @@ setcity(event.target.value);
     <div className="heading">  <h1>React Weather App</h1></div>
     
     <div className="search-box"><Search city={city} changeHandler={changeHandler} /></div>
-     <div className="weather-box"><Weather city={city} description={description} temp={temp} mintemp={mintemp} maxtemp={maxtemp} humidity={humidity} pressure={pressure}/></div>
+    {!city? "No Record":
+     (<div className="weather-box"><Weather city={city} description={description} temp={temp} mintemp={mintemp} maxtemp={maxtemp} humidity={humidity} pressure={pressure}/></div>)}
       
      
      </div>
