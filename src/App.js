@@ -27,6 +27,12 @@ function App() {
 
 
   const changeHandler = (event)=>{
+    setdescription('');
+    settemp(null);
+    setmintemp(null);
+    setmaxtemp(null);
+    sethumidity(null);
+    setpressure(null);
 setcity(event.target.value);
 // setflag(!flag);
   }
@@ -69,9 +75,10 @@ setcity(event.target.value);
   return (
     <>
    <div className="container">
+    
     <div className="row">
-      <div className="col-2"></div>
-      <div className="col-8 weather-report">
+      <div className="col-4"></div>
+      <div className="col-4 weather-report">
     <div className="heading">  <h1>React Weather App</h1></div>
     
     <div className="search-box"><Search city={city} changeHandler={changeHandler} /></div>
@@ -80,7 +87,7 @@ setcity(event.target.value);
       
      
      </div>
-      <div className="col-2"></div>
+      <div className="col-4"></div>
      </div>
 
    </div>
